@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+body{
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden auto;
+    font-family: 'Josefin Sans', sans-serif;
+    background: hsl(0, 0%, 98%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: background-color .2s ease-in-out;
+}
+
+*::-webkit-scrollbar{
+    width: 0;
+}
+
+*:focus{
+    outline: none;
+}
+
+.animate__animated{
+    animation-delay: .2s;
+}
+
+.shadow-sm{
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.shadow-lg{
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+/* Home background */
+
+.backhome{
+    width: 100%;
+    height: 300px;
+    background-image: url("../images/bg-desktop-light.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.backhomeDrk{
+    background-image: url("../images/bg-desktop-dark.jpg") !important;
+}
+
+
+/* main */
+
+main{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50% , 0);
+    width: 40%;
+    height: 85vh;
+    /* background-color: green; */
+}
+
+.title{
+    width: 100%;
+    height: 100px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.title h1{
+    font-size: 45px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 10px;
+}
+
+.title i{
+    cursor: pointer;
+    font-size: 26px;
+}
+
+/* add tache */
+
+.addTache{
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.addTache i{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid rgba(150, 150, 150, 0.247);
+    cursor: pointer;
+    font-size: 10px;
+    color: rgba(150, 150, 150, .8);
+}
+
+.addTache i::after{
+    content: "+";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60% , -50%);
+    font-size: 25px;
+    visibility: hidden;
+}
+
+.addTache i:hover::after{
+    visibility: visible;
+}
+
+.addTache input{
+    width: 90%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-left: 5px;
+}
+
+/* taches */
+
+.taches{
+    width: 100%;
+    height: auto;
+    max-height: 45vh;
+    overflow: hidden auto;
+    margin-top: 2rem;
+    background-color: white;
+    border-radius: 5px 5px 0 0;
+}
+
+.taches .tache{
+    width: 100%;
+    height: 60px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(150, 150, 150, 0.247);
+    padding: 0 1rem;
+}
+
+.taches .tache .check{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    line-height: 25px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid rgba(150, 150, 150, 0.247);
+}
+
+.check i{
+    visibility: hidden;
+}
+
+.taches .tache .check.completed{
+    background: linear-gradient(90deg, rgba(87,221,255,1) 0%, rgba(192,88,243,1) 100%) !important;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    border: none;
+}
+
+.completed i{
+    pointer-events: none;
+    visibility: visible !important;
+}
+
+.taches .tache p{
+    width: 80%;
+    height: 18px;
+    font-size: 18px;
+    margin-left: 5px;
+    overflow: hidden;
+    color: rgb(100, 100, 100);
+}
+
+.taches .tache p.completed{
+    text-decoration: line-through;
+}
+
+.taches .tache i{
+    font-size: 12px;
+    color: white;
+}
+
+.taches .tache > .delete{
+    cursor: pointer;
+    visibility: hidden;
+    font-size: 20px;
+    color: rgba(150, 150, 150, .8);
+}
+
+.taches .tache:hover > .delete{
+    visibility: visible;
+}
+
+/* operation */
+
+.operation{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    text-transform: capitalize;
+    color: rgb(100, 100, 100);
+    font-weight: 500;
+    border-radius: 0 0 5px 5px;
+}
+
+.operation > span:nth-child(1){
+    color: rgba(150, 150, 150, .8);
+    text-transform: none;
+    cursor: text;
+}
+
+.operation > span:nth-child(1):hover{
+    color: rgba(150, 150, 150, .8);
+}
+
+.operation > div span{
+    padding: 0 5px;
+}
+
+.operation > div span.active{
+    color: hsl(220, 98%, 61%);
+}
+
+.operation span{
+    cursor: pointer;
+}
+
+.operation span:hover{
+    color: hsl(220, 98%, 61%);
+}
+
+/* darkMode */
+
+.dark{
+    background-color: hsl(235, 24%, 19%) !important;
+    color: white !important;
+}
+
+.dark input{
+    color: white !important;
+}
+
+.darkmain{
+    background: hsl(235, 21%, 11%) !important;
+    color: white !important;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 1024px){
+    main{
+        width: 90%;
+    }
+
+    .operation .mainOperation{
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: white;
+        border-radius: 5px;
+        width: 100%;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+    }
+}

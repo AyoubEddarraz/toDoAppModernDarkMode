@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style/style.css">
+  <title>Todo app</title>
+</head>
+<body>
+  <!-- Home background -->
+  <div class="backhome"></div>
+  <!-- main -->
+  <main> 
+    <!-- title -->
+    <div class="title">
+      <h1>todo</h1>
+      <i class="iconeDark fas fa-moon"></i>
+    </div>
+    <!-- add new tache -->
+    <div class="addTache shadow-sm">
+      <i class="addTacheIcone"></i>
+      <input type="text" class="descTacheInput" placeholder="create a new todo">
+    </div>
+    <!-- all taches -->
+    <div class="taches shadow-lg"></div>
+    <!-- tache operations -->
+    <div class="operation shadow-sm">
+      <span class="countItems"></span>
+      <div class="mainOperation">
+        <span data-role="all">all</span>
+        <span data-role="active">active</span>
+        <span data-role="completed">completed</span>
+      </div>
+      <span class="clearCompleted">clear completed</span>
+    </div>
+  </main>
+
+  <script src="script/main.js" type="module"></script>
+</body>
+</html>
